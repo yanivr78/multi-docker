@@ -20,7 +20,7 @@ services:
       - ./server:/app
 
     # Env variables are never saved on an image, only created at run time
-    # If defined as "Key:Value" it will be taken from here, else it will be inherited from the workspace/OS env vars
+    # If defined as "Key:Value" it will be taken from this file or  it will be inherited from the workspace/OS env vars
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
