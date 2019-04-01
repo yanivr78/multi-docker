@@ -10,10 +10,10 @@ script:
   - docker run yanivr78/react-test npm test -- --coverage
 
 after_success:
-  - docker built -t yanivr78/multi-client ./client
-  - docker built -t yanivr78/multi-nginx ./nginx
-  - docker built -t yanivr78/multi-server ./server
-  - docker built -t yanivr78/multi-worker ./worker
+  - docker build -t yanivr78/multi-client ./client
+  - docker build -t yanivr78/multi-nginx ./nginx
+  - docker build -t yanivr78/multi-server ./server
+  - docker build -t yanivr78/multi-worker ./worker
 
   # Login to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
